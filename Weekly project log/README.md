@@ -1,8 +1,8 @@
 # Overview
-This repositry is ?????? and the purpose of this repositry is???
+This repository is a weekly log and accountability of my work towards the semester project.
 
-# Table of Content
+# Table of Contents
 | Weeks   | What we did                                                                             |
 | ------- | --------------------------------------------------------------------------------------- |
 | Week 1  | Figuring out Github                                                                     |
-| Week #  | ...and so on                                                                            |
+| Week 2  |                                                                                         |
