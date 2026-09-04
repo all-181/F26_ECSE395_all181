@@ -17,7 +17,7 @@ Document: Overview of Work
 **Date:** 8/28/28
 + The needfinding email was sent at 1:17pm by Owen Minami to Mr. Moss.
 
-![Needfinding Email](Images/image1_week1.png)
+![Needfinding Email](../Images/image1_week1.png)
 
 
 + I edited the team contract to call for reduction of unnecessary phone usage and to promote the use of respectful language.
