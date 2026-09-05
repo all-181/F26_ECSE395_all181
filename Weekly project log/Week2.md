@@ -4,34 +4,35 @@
 Week: 2
 Document: Overview of Work
 
+Note: (I) at the end of a statement represents that the task was completed individually.  (T) represents that the task was completed by the team.
 
 **Date:** 8/26/26
 
 Goal: Practice connecting documents between VS Code and GitHub 
-+ Create document to practice connecting GitHub and VS Code
++ Create document to practice connecting GitHub and VS Code (I)
 
 **Date:** 8/28/26
 
-+ Team revised email to David Moss
-+ Owen sent email
++ Team revised email to David Moss (T)
++ Owen sent email (T)
 
 **Date** 9/1/2026
 
-+ David Moss replied with availability
++ David Moss replied with availability(T)
 
 **Date:** 9/2/2026
 
-+ Owen replied to David Moss confirming meeting time
++ Owen replied to David Moss confirming meeting time (T)
 
 
 **Date:** 9/3/26
 
 Goal: Conduct a Need-Finding Interview
 
-+ 3:40pm: David Moss confirms meeting time
++ 3:40pm: David Moss confirms meeting time (T)
 
-+ 5:30pm: Our team (Owen, Trevor, Alex, and myself) met in Glennan student lounge to discuss our interview strategy
-+ 5:45pm: Our team met via Zoom with Mr. David Moss to discuss his problem statement
++ 5:30pm: Our team (Owen, Trevor, Alex, and myself) met in Glennan student lounge to discuss our interview strategy (T)
++ 5:45pm: Our team met via Zoom with Mr. David Moss to discuss his problem statement (T)
 
 **Meeting Minutes**
 
@@ -91,12 +92,14 @@ RUN:
 ![Email Thread 1/2](../Images/image1_week2.png)
 ![Email Thread 2/2](../Images/image2_week2.png)
 
++ I organized lab meeting notes after the meeting into categories of hit, pitch, run, and general (I).
+
 
 **Date:** 9/4/2026
 
 Goal: Complete Lab 2
-+ Gather hardware (ESP32 and USB-C cable)
-+ Download PlatformIO IDE on VS Code
-+ Create new project in PlatformIO named Blink_Test, on Adafruit Feather ESP32 V2, on framework Arduino
-+ Use Skeleton Code.md as a framework for code
-+ Record video of ESP32 blinking
++ Gather hardware (ESP32 and USB-C cable) (I)
++ Download PlatformIO IDE on VS Code (I)
++ Create new project in PlatformIO named Blink_Test, on Adafruit Feather ESP32 V2, on framework Arduino (I)
++ Use Skeleton Code.md as a framework for code (I)
++ Record video of ESP32 blinking and place video in Lab 2 Folder on GitHub (I)
