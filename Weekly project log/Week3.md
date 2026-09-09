@@ -28,3 +28,6 @@ Note: (I) at the end of a statement represents that the task was completed indiv
 + Went over all of the parts of the assignment, finalizing background, needs statements, and personas. Then discussed key insights
 + Wrapped up by discussing a plan for tomorrow in class and submission of the Needs Statements Assignment, Trevor to submit. 
 + Meeting concluded at 8:40 
+
+**Date:** 9/9/2026
++ I independently reviewed the _Project Background Needs Statement_ and commmunicated to the team that I approved it for submission. (I)
