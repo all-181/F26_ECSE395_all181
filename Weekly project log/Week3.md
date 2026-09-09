@@ -15,3 +15,16 @@ Note: (I) at the end of a statement represents that the task was completed indiv
 + Our team set up a time to meet on Tuesday, 9/8, at 8:15pm. (T)
 + I drafted the _Project Background_ section of the _Project Backgrounds Need Statement_ assignment on the shared document. (I)
 + I created a shared Figma document for our team's future meeting. (I)
+
+**Date:** 9/8/2026
+
++ Our team met to work on the _Project Background Needs Statement_ (T)
+
+**Minutes:** Taken by Alex Thornton
++ Meeting Started at 8:15 pm
++ Started our affinity clustering part of the assignment from around 8:18-8:30
++ Each teammate created about 8-12 post it ideas
++ Then we grouped according to similarity of ideas and recollections from the meeting with David Moss and finished affinity clustering 8:35
++ Went over all of the parts of the assignment, finalizing background, needs statements, and personas. Then discussed key insights
++ Wrapped up by discussing a plan for tomorrow in class and submission of the Needs Statements Assignment, Trevor to submit. 
++ Meeting concluded at 8:40 
