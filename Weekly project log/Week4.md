@@ -12,3 +12,6 @@ Note: (I) at the end of a statement represents that the task was completed indiv
 + Our team met to discuss the _Functional and Technical Specifications_ assignment and the _Needfinding Presentation_.
 **Minutes:**
 
+**Date:** 9/15/2026
++ I completed the Project Background slide for the _Needfinding Presentation_. (I)
++ I submitted the slideshow forthe _Needfinding Presentation_ on Canvas once each group member communicated to me that they were finished with their assigned slide. (I)
