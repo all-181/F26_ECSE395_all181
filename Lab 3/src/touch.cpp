@@ -1,4 +1,4 @@
-#include <Arduino.h> 
+/*#include <Arduino.h> 
 
 #define LED_PIN 13 //all181: The general input-output pin 13 is assigned to control the LED
 #define SENSOR_PIN A1  //all181: sets that sensor pin is connected to pin 0
@@ -30,4 +30,4 @@ else{
 
 delay(100); //all181: delay the loop 100ms and then recheck if the sensor is touched
 
-}
+}*/

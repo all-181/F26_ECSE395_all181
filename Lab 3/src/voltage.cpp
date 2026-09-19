@@ -1,9 +1,9 @@
-#include <Arduino.h>
+//#include <Arduino.h>
 
 
 
 // Put your potentiometer pin assignment here
-#define SENSOR_PIN A1
+//#define SENSOR_PIN A1
 
 /*void setup() {
     Serial.begin(115200);
