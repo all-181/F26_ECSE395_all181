@@ -24,13 +24,13 @@ See photo of setup in _photos videos_ folder under _Lab 4_ folder titled ecse395
 + Increasing delay() input increases the amount of spin time, and decreasing the input decreases the amount of spin time.  
 
 The second part of the lab was to control the length and direction of spinning for the TT motor.  The goal was 5 seconds spinning clockwise, 2 second stop, 5 second spin CCW, then 2 second stop, then loop.  See _TT Motor Rotate_ for code.
-A video of this working is uploaded to _photos videos_ folder in _Lab 4_ folder titled ecse395_lab4_1
+A video of this working is uploaded to _pictures videos_ folder in _Lab 4_ folder titled ecse395_lab4_1
 
 The third part of the lab was to connect a Servo motor to the ESP32 and power it.  
 To do this, first we had to download the correct library from Platform.io.
 The Servo motor uses pulse-width modulation (PWM) for its control type.  This means that the width of the pulse is being changed in order to communicate what angle the motor is supposed to spin to.  
 
-See photo of setup in _photos videos_ folder under _Lab 4_ folder titled ecse395_lab4_servo_circuit
+See photo of setup in _pictures videos_ folder under _Lab 4_ folder titled ecse395_lab4_servo_circuit
 
 The variables _minPulseWidth_ and _maxPulseWidth_ are the range of widths, in microseconds (us), that correspond to the minimum and maximum angles.  For example, an input of _minPulseWidth_ will result in the lowest angle allowed.
 

@@ -15,3 +15,7 @@ Note: (I) at the end of a statement represents that the task was completed indiv
 **Date:** 9/15/2026
 + I completed the Project Background slide for the _Needfinding Presentation_. (I)
 + I submitted the slideshow forthe _Needfinding Presentation_ on Canvas once each group member communicated to me that they were finished with their assigned slide. (I)
+
+**Date:** 9/18/2026
++ I completed the lab work for Lab 4 to better learn how to use the ESP32 for the project. (I)
++ Our team discussed meeting times and emailed Mr. Moss about an upcoming meeting. (T)
