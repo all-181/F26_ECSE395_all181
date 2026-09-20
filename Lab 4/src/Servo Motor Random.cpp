@@ -1,13 +1,10 @@
-#include <ESP32Servo.h>
-// Don't forget to include the library!!
-// From PlatfromIO library, search for ESP32 servo and add it to the project
+#include <ESP32Servo.h> //all181: include library
 
-// Define the servo and the pin it is connected to, what is your servo pin?
-Servo myServo;
+Servo myServo; //all181: pin 26, output pin, number found on esp32 diagram
 const int servoPin = 26;
 
 // variable for random angle
-int randomAngle;
+int randomAngle; 
 
 // Variable for pulse width
 int pulseWidth;
@@ -29,8 +26,8 @@ void loop() {
     randomAngle = random(0,180); // random(A,B); returns a random value between A and B
 
     // ---SECTION 2: Map Pulse Width with Angle
-    pulseWidth = map(randomAngle, 0, 180, minPulseWidth, maxPulseWidth); // from Servo Motor.cpp, what did you learn from using map function?
-    myServo.writeMicroseconds(pulseWidth); // writing pulse width to servo
+    pulseWidth = map(randomAngle, 0, 180, minPulseWidth, maxPulseWidth); // all181: create a pulsewidth that corresponds to the random angle
+    myServo.writeMicroseconds(pulseWidth); // all181: write pulse width to servo motor
 
-    delay(500); // change delay to 500ms
+    delay(random(400,1000)); // change delay to range between 400ms and 1000ms
 }
