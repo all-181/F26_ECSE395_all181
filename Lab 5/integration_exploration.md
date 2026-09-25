@@ -8,7 +8,9 @@ This is the last formal lab assignment working with the ESP32.  I will work on i
 I intend to design a stopwatch.  The stopwatch begins when a button is pressed.  The stopwatch ends when a vibration sensor detects a hit.  A screen will display the time.
 
 **Repository Overview:**
+
 main.cpp --> all code for lab 5 (integration of ESP32, OLED, vibration module, button module)
+
 ecse395_lab5_photo.jpeg --> photo of circuit for lab 5
 
 **Steps Taken In Class:**
@@ -16,23 +18,37 @@ ecse395_lab5_photo.jpeg --> photo of circuit for lab 5
 First, I read over example code for each new component I would be using.
 
 OLED:
+
 Tutorial Site: https://docs.sunfounder.com/projects/umsk/en/latest/03_esp32/esp32_lesson27_oled.html#esp32-lesson27-oled 
 Wiring diagram is found on tutorial site.
+
 Adafruit SSD1306 Library: Designed to help with interfacing of SSD1306 OLED display.  
+
 Adafruit GFX Library: Core graphics library for displaying text, colors, shapes, etc.  This will be necessary for displaying the intended stopwatch numbers.
+
 Sample code, which my code is based on, is found on tutorial site. 
+
 The OLED uses Inter-Integrated Circuit communication protocol (I2C), so it is connected to the ESP32 via SCL and SDA.
 
+
 Button:
+
 Tutorial Site: https://docs.sunfounder.com/projects/umsk/en/latest/03_esp32/esp32_lesson01_button.html#eps32-lesson01-button
+
 Wiring diagram is found on tutorial site.
+
 No additional libraries are needed.
+
 When pressed, the button closes the circuit.  When unpressed, the button leaves an open circuit.
 
 Vibration Sensor:
+
 Tutorial Site: https://docs.sunfounder.com/projects/umsk/en/latest/03_esp32/esp32_lesson24_vibration_sensor.html#esp32-lesson24-vibration-sensor
+
 Wiring diagram is found on tutorial site.
+
 This is a digital sensor that will go high (1) when the amplitude of a vibration exceeds the reference voltage set, and otherwise will go low (0).
+
 
 Next, I wrote an algorithm for my stopwatch.
 
@@ -49,20 +65,31 @@ Next, I wrote an algorithm for my stopwatch.
 I then implemented the above algorithm.  My physical circuit is based on the wiring diagrams mentioned above.
 
 A video of the circuit functioning as intended is uploaded on Canvas.
+
 A picture of the circuit is included in the Lab 5 folder titled ecse395_lab5_photo.jpeg
 
 **Setup and Preparation:**
+
 I am using the Vibration Sensor Module (SW-420).
+
 This module can detect vibrations or shocks on a surface.
+
 I am also using the Button Module.
+
 The button module detects the state of a button.
+
 I am using the OLED Display Module (SSD1306).
+
 This module can display text, graphics, and images.
 
 **Documentation:**
+
 Vibration Sensor: https://docs.sunfounder.com/projects/umsk/en/latest/01_components_basic/24-component_vibration.html
+
 OLED: https://docs.sunfounder.com/projects/umsk/en/latest/01_components_basic/27-component_oled.html 
+
 Button: https://docs.sunfounder.com/projects/umsk/en/latest/01_components_basic/01-component_button.html 
+
 
 
 **Tools Used:**
@@ -75,7 +102,9 @@ Button: https://docs.sunfounder.com/projects/umsk/en/latest/01_components_basic/
 + VS Code with PlatformIO
 
 **Upload Process:**
+
 I powered the system with a 3.3V power supply.  
+
 I connected the ESP32 to my computer, running Windows, with a USB-C cable.
 
 **Time Reporting and Reflection:**
