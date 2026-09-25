@@ -8,3 +8,4 @@ This repository is a weekly log and accountability of my work towards the semest
 | Week 2  | Needfinding Interview                                                                   |
 | Week 3  | Needs Statement                                                                         |
 | Week 4  | Needfinding Presentation                                                                |
+| Week 5  | Brainstorming Milestone                                                                 |

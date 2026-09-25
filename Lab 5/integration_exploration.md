@@ -2,11 +2,13 @@
 **Lab 5:** Sensor Actuation Integration
 
 **Assignment Overview:**
+This is the last formal lab assignment working with the ESP32.  I will work on integrating sensors and actuators. 
 
+**Desired Behavior:**
 I intend to design a stopwatch.  The stopwatch begins when a button is pressed.  The stopwatch ends when a vibration sensor detects a hit.  A screen will display the time.
 
 **Repository Overview:**
-main.cpp --> all code for lab 5
+main.cpp --> all code for lab 5 (integration of ESP32, OLED, vibration module, button module)
 ecse395_lab5_photo.jpeg --> photo of circuit for lab 5
 
 **Steps Taken In Class:**
@@ -19,6 +21,7 @@ Wiring diagram is found on tutorial site.
 Adafruit SSD1306 Library: Designed to help with interfacing of SSD1306 OLED display.  
 Adafruit GFX Library: Core graphics library for displaying text, colors, shapes, etc.  This will be necessary for displaying the intended stopwatch numbers.
 Sample code, which my code is based on, is found on tutorial site. 
+The OLED uses Inter-Integrated Circuit communication protocol (I2C), so it is connected to the ESP32 via SCL and SDA.
 
 Button:
 Tutorial Site: https://docs.sunfounder.com/projects/umsk/en/latest/03_esp32/esp32_lesson01_button.html#eps32-lesson01-button
@@ -74,3 +77,11 @@ Button: https://docs.sunfounder.com/projects/umsk/en/latest/01_components_basic/
 **Upload Process:**
 I powered the system with a 3.3V power supply.  
 I connected the ESP32 to my computer, running Windows, with a USB-C cable.
+
+**Time Reporting and Reflection:**
+
+1. It took me 4 hours to complete this assignment.
+2. Medium
+3. Interpreting sample code and learning new sensors/actuators without a detailed lab manual was difficult.  However, this lab did not take me as long as past labs, and I feel more confident in how the sensors work now that I wrote the code myself instead of working off of skeleton code.
+4. I feel more comfortable with using new sensors/actuators if given adequate time.  
+5. Having a wide variety of sensors and actuators to choose from is super fun!
