@@ -3,11 +3,13 @@
 
 **Assignment Overview:**
 
-I intend to design a stopwatch.
+I intend to design a stopwatch.  The stopwatch begins when a button is pressed.  The stopwatch ends when a vibration sensor detects a hit.  A screen will display the time.
 
 **Repository Overview:**
+main.cpp --> all code for lab 5
+ecse395_lab5_photo.jpeg --> photo of circuit for lab 5
 
-**Steps:**
+**Steps Taken In Class:**
 
 First, I read over example code for each new component I would be using.
 
@@ -37,14 +39,14 @@ Next, I wrote an algorithm for my stopwatch.
 4. Display "2" for 1 second.
 5. Display "1" for 1 second.
 6. Display "0.0"
-7. Count up every tenth of a second (0.1s = 100 ms).  For example, 0.1 seconds after step 6, display "0.01".  
-8. Check if vibration module is pressed.  
+7. Count up 0.1s.
+8. Check if vibration module pressed.
 9. If pressed, display current time for 5 seconds, then go to step 1.  If not pressed, go to step 7.
 
+I then implemented the above algorithm.  My physical circuit is based on the wiring diagrams mentioned above.
 
-
-
-
+A video of the circuit functioning as intended is uploaded on Canvas.
+A picture of the circuit is included in the Lab 5 folder titled ecse395_lab5_photo.jpeg
 
 **Setup and Preparation:**
 I am using the Vibration Sensor Module (SW-420).
@@ -54,16 +56,21 @@ The button module detects the state of a button.
 I am using the OLED Display Module (SSD1306).
 This module can display text, graphics, and images.
 
-**In-Class Task Description:**
-
 **Documentation:**
 Vibration Sensor: https://docs.sunfounder.com/projects/umsk/en/latest/01_components_basic/24-component_vibration.html
 OLED: https://docs.sunfounder.com/projects/umsk/en/latest/01_components_basic/27-component_oled.html 
 Button: https://docs.sunfounder.com/projects/umsk/en/latest/01_components_basic/01-component_button.html 
+
+
 **Tools Used:**
++ ESP32
++ USB-C cord
++ Vibration Sensor Module
++ Button Module
++ OLED display
++ Power Supply
++ VS Code with PlatformIO
 
 **Upload Process:**
-
-**System Explanation:**
-Picture:
-Video:
+I powered the system with a 3.3V power supply.  
+I connected the ESP32 to my computer, running Windows, with a USB-C cable.
