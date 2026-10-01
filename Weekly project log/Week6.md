@@ -9,3 +9,7 @@ Document: Overview of Work
 + I created the Gantt chart document. (I)
 + I added assignments/submissions listed on Canvas to the Gantt chart. (I)
 + I noted that I would create each deliverable document in the Gantt chart. (I)
+
+**Date:** 10/01/2026
++ I created the deliverable document for _System Architecture and Prototype Plan_ assignment, and I added a summary of the instructions provided to provide an outline for the assignment. (I)
++ I communicated to the team that I have created the document and confirmed that we are meeting during lab period tomorrow, as well as meeting with David Moss tomorrow. (I)
