@@ -9,3 +9,4 @@ This repository is a weekly log and accountability of my work towards the semest
 | Week 3  | Needs Statement                                                                         |
 | Week 4  | Needfinding Presentation                                                                |
 | Week 5  | Brainstorming Milestone                                                                 |
+| Week 6  | Concept Selection Meeting                                                               |
