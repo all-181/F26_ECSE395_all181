@@ -15,7 +15,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET); // all
 
 
 // START BUTTON 
-const int buttonPinStart = 34; // all181: connected button sensor to A2
+const int buttonPinStart = 25; // all181: connected button sensor to A1
 int buttonState = 0; // all181: variable to hold current state of button
 
 // STOP BUTTON
