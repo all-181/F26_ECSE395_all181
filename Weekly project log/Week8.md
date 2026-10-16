@@ -29,4 +29,6 @@ Meeting concluded 2:55
 
 + I submitted the _Verification and Validation_ document. (I)
 
-**Date:** 
+**Date:** 10/16/2026
++ I individually finished the slides for Prototype 2 for the midterm presentation. (I)
++ Our team met with TA Yu, who gave us mostly positive feedback on our _Verification and Validation_ documents.  The only thing that we need to be more clear about going forward is translating our technical specifications to specific, executable experiments.  (T)
