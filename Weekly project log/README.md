@@ -11,3 +11,4 @@ This repository is a weekly log and accountability of my work towards the semest
 | Week 5  | Brainstorming Milestone                                                                 |
 | Week 6  | Concept Selection Meeting                                                               |
 | Week 7  | Initial Prototyping                                                                     |
+| Week 8  | Prototyping, continued                                                                  |
