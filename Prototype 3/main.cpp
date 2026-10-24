@@ -3,7 +3,7 @@
 #include <Wire.h>
 #include <Adafruit_SSD1306.h> // all181: includes required library
 #include <adafruit_GFX.h> // all181: includes required library
-#include "C:\GitHub\F26_ECSE395_all181\Prototype 2\src\pitches.h" // all181: includes library for buzzer
+#include "C:\GitHub\F26_ECSE395_all181\Prototype 3\src\pitches.h" // all181: includes library for buzzer
 
 // OLED 
 #define SCREEN_WIDTH 128 // all181: display width in pixels
