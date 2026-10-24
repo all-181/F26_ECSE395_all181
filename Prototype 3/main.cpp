@@ -3,7 +3,7 @@
 #include <Wire.h>
 #include <Adafruit_SSD1306.h> // all181: includes required library
 #include <adafruit_GFX.h> // all181: includes required library
-#include "C:\GitHub\F26_ECSE395_all181\Prototype 3\src\pitches.h" // all181: includes library for buzzer
+#include "C:\Users\allan\OneDrive - Case Western Reserve University\org_v1\My Documents\PlatformIO\Projects\Prototype 3 PIO\src\pitches.h" // all181: includes library for buzzer
 
 // OLED 
 #define SCREEN_WIDTH 128 // all181: display width in pixels
@@ -16,29 +16,29 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET); // all
 // DEFINE INPUTS AND OUTPUTS
 
 // POTENTIOMETER
-const int potentiometerPin = 26;  // all181: connected to A0
+const int potentiometerPin = 34;  // all181: connected to A2 (analog input)
 int potentiometerValue = 0; // all181: initializing a variable to hold the current state of the potentiometer
 
-// START BUTTON 
-const int buttonPinStart = 25; // all181: connected to A1
+
+
+//START BUTTON 
+const int buttonPin = BUTTON; // SW38 on the ESP32
 int buttonState = 0; // all181: variable to hold current state of button
 
-// VIBRATION SENSOR
-const int vibrationPinStop = 34; // all181: connected to A2
 
-// BUZZER #1
-const int buzzerPinOne = 13; //all181: connected to 13
 
-// BUZZER #2
-const int buzzerPinTwo = 12 //all181: connected to 12
+// VIBRATION SENSOR (digital input)
+const int vibrationPinStop = 26; // all181: connected to 27
 
-// BUZZER #3
-const int buzzerPinThree = 27 //all181: connected to 27
+// BUZZER
+const int buzzerPinOne = 25; //all181: connected to A1 (analog i/o)
 
-int melodyOne[] = {NOTE_C3, NOTE_C3, NOTE_C3, NOTE_C4};
-int melodyTwo[] = {NOTE_E3, NOTE_E3, NOTE_E3, NOTE_E4};
-int melodyThree[] = {NOTE_G3, NOTE_G3, NOTE_G3, NOTE_G4};
-int noteDurations[] = {4, 4, 4, 2};
+
+
+int notesList[] = {NOTE_C4, NOTE_CS4, NOTE_D4, NOTE_DS4, NOTE_E4, NOTE_F4, NOTE_FS4, NOTE_G4, NOTE_GS4, NOTE_A5};
+int notesListHigher[] = {NOTE_C5, NOTE_CS5, NOTE_D5, NOTE_DS5, NOTE_E5, NOTE_F5, NOTE_FS5, NOTE_G5, NOTE_GS5, NOTE_A6};
+int ourNote = NOTE_C4;
+int ourNoteHigher = NOTE_C5;
 
 void setup() {
     // OLED
@@ -62,22 +62,18 @@ void setup() {
         display.clearDisplay(); 
 
     // START BUTTON
-    pinMode(buttonPinStart, INPUT); // all181: makes button an input
+    pinMode(buttonPin, INPUT);
 
-    // STOP BUTTON
-    pinMode(buttonPinStop, INPUT); // all181: makes vibration sensor an input
+    // STOP
+    pinMode(vibrationPinStop, INPUT); // all181: makes vibration sensor an input
+
+    // BUZZER
+    pinMode(buzzerPinOne, OUTPUT);
+
+    // POTENTIOMETER
+    pinMode(potentiometerPin, INPUT);
 
     }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -98,57 +94,50 @@ void loop() {
         
 
     // all181: Check if button is pressed.
-    buttonState = digitalRead(buttonPinStart); // all181: read button value
+    buttonState = digitalRead(buttonPin); // all181: read button value
 
     if (buttonState == LOW){ // all181: if button is pressed, check what the potentiometer is at!
 
         potentiometerValue = analogRead(potentiometerPin);
-        
-        //all181: Potentiometer value ranges from 0 to 4096.
-        // from 0 - 1365, use buzzer #1
-        // from 1366 - 2730, use buzzers #1 and #2
-        // from 2731 - 4096, use buzzers #1, #2, and #3
 
-        if (potentiometerValue < 1366){
-            //all181:play melody on buzzer #1
-            for(int thisNote =0; thisNote> 8; thisNote++){
-             int noteDuration = 1000/noteDurations[thisNote];
-             tone(buzzerPinOne, melodyOne[thisNote], noteDuration);
-             int pauseBetweenNotes = noteDuration * 1.30;
-             delay(pauseBetweenNotes);
-             noTone(buzzerPinOne);
-             }
+        // choose which note to play (this is the lower octave)
+        for (int n = 0; n < 10; n++){
+            if (potentiometerValue > 410*n && potentiometerValue < 410*(n+1)){
+                ourNote = notesList[n];
+                ourNoteHigher = notesListHigher[n];
+
+                display.clearDisplay();
+                display.setTextSize(1); // sets text size
+                display.setCursor(0,28); // sets cursor position
+                display.print("VOLUME:" + String(n) + "/10");
+                display.display();
+                delay(100);
+                
+            }
         }
 
-        if (potentiometerValue < 2730 && potentiometerValue > 1366){
-            //all181:play melody on buzzer #1 and #2
-            for(int thisNote =0; thisNote> 8; thisNote++){
-             int noteDuration = 1000/noteDurations[thisNote];
-             tone(buzzerPinOne, melodyOne[thisNote], noteDuration);
-             tone(buzzerPinTwo, melodyTwo[thisNote], noteDuration);
-             int pauseBetweenNotes = noteDuration * 1.30;
-             delay(pauseBetweenNotes);
-             noTone(buzzerPinOne);
-             noTone(buzzerPinTwo);
-             }
-        }
+        // play ourNote three times, then play one octave above once
+        tone(buzzerPinOne, ourNote, 500);
+        delay(500);
+        noTone(buzzerPinOne);
+        delay(100);
 
-        if (potentiometerValue > 2731){
-            //all181:play melody on buzzer #1, #2, and #3
-            for(int thisNote =0; thisNote> 8; thisNote++){
-             int noteDuration = 1000/noteDurations[thisNote];
-             tone(buzzerPinOne, melodyOne[thisNote], noteDuration);
-             tone(buzzerPinTwo, melodyTwo[thisNote], noteDuration);
-             tone(buzzerPinThree, melodyThree[thisNote], noteDuration);
-             int pauseBetweenNotes = noteDuration * 1.30;
-             delay(pauseBetweenNotes);
-             noTone(buzzerPinOne);
-             noTone(buzzerPinTwo);
-             noTone(buzzerPinThree);
-             }
-        }
-        
-  
+        tone(buzzerPinOne, ourNote, 500);
+        delay(500);
+        noTone(buzzerPinOne);
+        delay(100);
+
+        tone(buzzerPinOne, ourNote, 500);
+        delay(500);
+        noTone(buzzerPinOne);
+        delay(100);   
+
+        tone(buzzerPinOne, ourNoteHigher, 1000);
+        delay(1000);
+        noTone(buzzerPinOne);
+       
+                       
+
 
 
         // all181: 6) Display "0.0"
