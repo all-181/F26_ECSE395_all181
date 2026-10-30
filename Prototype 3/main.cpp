@@ -2,7 +2,7 @@
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_SSD1306.h> // all181: includes required library
-#include <adafruit_GFX.h> // all181: includes required library
+#include <Adafruit_GFX.h> // all181: includes required library
 #include "C:\Users\allan\OneDrive - Case Western Reserve University\org_v1\My Documents\PlatformIO\Projects\Prototype 3 PIO\src\pitches.h" // all181: includes library for buzzer
 
 // OLED 
@@ -40,9 +40,27 @@ int notesListHigher[] = {NOTE_C5, NOTE_CS5, NOTE_D5, NOTE_DS5, NOTE_E5, NOTE_F5,
 int ourNote = NOTE_C4;
 int ourNoteHigher = NOTE_C5;
 
+void showTime(unsigned long ms) {
+    unsigned long minutes   = ms / 60000;
+    unsigned long seconds   = (ms / 1000) % 60;
+    unsigned long millisPart = ms % 1000;        // 0-999 (first digit = tenths)
+
+    char buf[16];
+    snprintf(buf, sizeof(buf), "%02lu:%02lu.%03lu", minutes, seconds, millisPart);
+
+    display.clearDisplay();
+    display.setTextSize(2);
+    display.setTextColor(WHITE);
+    display.setCursor(0, 28);
+    display.print(buf);
+    display.display();
+}
+
 void setup() {
     // OLED
     Serial.begin(9600); // all181: initialize baud rate for OLED; different from serial monitor
+    Wire.begin(22,20);
+    Wire.setClock(400000);
 
     // all181: check to see if we can write to the OLED screen
     if (!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)){
@@ -140,36 +158,25 @@ void loop() {
 
 
 
-        // all181: 6) Display "0.0"
-        display.clearDisplay();
-        display.setTextSize(2); // sets text size
-        display.setCursor(0,28); // sets cursor position
-        display.print("0.0");
-        display.display();
-        float watchTime = 0.0; // all181: initialize time variable
+unsigned long startTime = millis();
+unsigned long elapsed = 0;
 
-        while (digitalRead(vibrationPinStop) == 0){
-            watchTime = watchTime + 0.01; // increment watch time
-            display.setTextSize(2); // sets text size
-            display.setCursor(0,28); // sets cursor position
-            display.print(watchTime,2);
-            display.display(); // display watch time, specify 1 decimal place
-            delay(10); // delay 10ms = 0.01s
-            display.clearDisplay();
+while (digitalRead(vibrationPinStop) == 0) {
+    elapsed = millis() - startTime;
+    showTime(elapsed);              // live updating display
+}
 
-        }
+// stop detected: grab the final exact time and show it
+elapsed = millis() - startTime;
+showTime(elapsed);
+delay(5000);
+display.clearDisplay();
+display.display();
 
-        // all181: now stop button has been pressed
-        // all181: display current time for 5 seconds
-        display.println(watchTime);
-        display.display();
-        delay(5000);
-        display.clearDisplay();
+    } //else { 
+        //delay(100); // all181: add delay of 0.1s between checking if button pressed
 
-    } else {
-        delay(100); // all181: add delay of 0.1s between checking if button pressed
-
-    }
+    //}
 
 
 }
