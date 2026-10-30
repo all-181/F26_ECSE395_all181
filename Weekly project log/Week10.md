@@ -19,3 +19,14 @@ Allison: Evaluation plan slides, Prototype #3 document
 Owen: Prototype #3 document, Specs slides
 Alex: Prototype #3 slides, Design overview slides
 Meeting concluded 5:30pm.
+
+
+**Date:** 10/28/2026
++ I created the _MVP_ document and shared with the group. (I)
+
+**Date:** 10/30/2026
++ I created a cardboard and glue to-scale base with a built-in compartment for a vibration sensor, then attached this to the circuit to test if the vibration sensor placement works. (I)
++ Team met during class hours. (T)
++ The team worked to calibrate the vibration sensor so that it could detect when a player hit the base.  Video submitted to Canvas. (T)
+
+**Meeting Minutes:**
