@@ -23,10 +23,10 @@ Meeting concluded 5:30pm.
 
 **Date:** 10/28/2026
 + I created the _MVP_ document and shared with the group. (I)
++ Our team presented our project progress to the class. (T)
 
 **Date:** 10/30/2026
 + I created a cardboard and glue to-scale base with a built-in compartment for a vibration sensor, then attached this to the circuit to test if the vibration sensor placement works. (I)
 + Team met during class hours. (T)
 + The team worked to calibrate the vibration sensor so that it could detect when a player hit the base.  Video submitted to Canvas. (T)
-
-**Meeting Minutes:**
++ Decided that Trevor will work on the player identification system on Saturday (using possibly a QR code scanner, possibly a camera module) and Owen will work on implementing the speaker with controlled volume. (T)
