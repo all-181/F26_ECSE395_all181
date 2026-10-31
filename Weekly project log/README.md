@@ -13,3 +13,4 @@ This repository is a weekly log and accountability of my work towards the semest
 | Week 7  | Initial Prototyping                                                                     |
 | Week 8  | Prototyping, continued                                                                  |
 | Week 9  | Prototyping, continued                                                                  |
+| Week 10 | Midterm Presentation, MVP Preparation                                                   |
