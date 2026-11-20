@@ -16,3 +16,4 @@ This repository is a weekly log and accountability of my work towards the semest
 | Week 10 | Midterm Presentation, MVP Preparation                                                   |
 | Week 11 | Plan Verification and Validation, refine MVP                                            |
 | Week 12 | Validation Testing                                                                      |
+| Week 13 | Data Analysis and Final Report Planning                                                 |
